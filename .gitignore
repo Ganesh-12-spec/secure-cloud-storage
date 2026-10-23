@@ -1,0 +1,13 @@
+.venv/
+.venv-broken-backup/
+__pycache__/
+*.pyc
+.env
+*.key
+keys/
+uploads/
+storage/
+*_encrypted.zip
+tampered_blocks/
+encrypted_blocks/
+recovered.txt
