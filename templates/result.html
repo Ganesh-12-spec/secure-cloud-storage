@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Result | SecureCloud</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="brand">Secure<span>Cloud</span></div>
+        <div class="status">● Encryption complete</div>
+    </header>
+
+    <main>
+        <section class="panel">
+            <p class="eyebrow">FILE PROTECTION RESULT</p>
+            <h1>File <span>protected.</span></h1>
+            <p class="intro">{{ message }}</p>
+
+            <div class="features">
+                <div><strong>Filename</strong><span>{{ filename }}</span></div>
+                <div><strong>Encrypted blocks</strong><span>{{ block_count }}</span></div>
+                <div><strong>Algorithm</strong><span>AES-256-GCM</span></div>
+            </div>
+
+            <p class="notice">
+                Keep your encryption key private. The key is not included
+                in the download.
+            </p>
+
+            <a href="{{ url_for('download_encrypted', job_id=job_id) }}">
+                <button type="button">Download encrypted blocks →</button>
+            </a>
+
+            <p><a href="/">← Back to SecureCloud</a></p>
+        </section>
+    </main>
+</body>
+</html>

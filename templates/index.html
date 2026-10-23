@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureCloud | File Protection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="brand">Secure<span>Cloud</span></div>
+        <div class="status">● Local system</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">CLOUD COMPUTING MINI PROJECT</p>
+            <h1>Your files.<br><span>Your control.</span></h1>
+            <p class="intro">
+                Protect files using AES-256-GCM encryption and block-based
+                storage. Verify their integrity before restoring them.
+            </p>
+        </section>
+
+        <section class="panel">
+            <h2>Secure file storage</h2>
+            <p class="muted">Choose a file to encrypt and protect.</p>
+
+            <form action="/encrypt" method="post" enctype="multipart/form-data">
+                <label for="file">Select a file</label>
+                <input id="file" name="file" type="file" required>
+                <button type="submit">Encrypt file securely →</button>
+            </form>
+
+            <div class="features">
+                <div><strong>AES-256-GCM</strong><span>Authenticated encryption</span></div>
+                <div><strong>1 MiB blocks</strong><span>Segmented file storage</span></div>
+                <div><strong>Integrity check</strong><span>Tamper detection</span></div>
+            </div>
+        </section>
+
+        <p class="notice">
+            Demo mode: files are processed on this computer.
+            AWS cloud storage will be configured separately.
+        </p>
+    </main>
+
+    <footer>SecureCloud · Secure File Storage and Cloud Website Hosting</footer>
+</body>
+</html>

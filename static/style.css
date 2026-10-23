@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #0b1020;
+    color: #f3f5ff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    border-bottom: 1px solid #252c40;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.brand span, .hero h1 span {
+    color: #7c9cff;
+}
+
+.status {
+    color: #a8f0cb;
+    font-size: 13px;
+}
+
+main {
+    width: min(900px, 88%);
+    margin: 65px auto;
+}
+
+.eyebrow {
+    color: #9aafff;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 76px);
+    line-height: 1.05;
+    margin: 18px 0;
+}
+
+.intro, .muted {
+    color: #aab3ca;
+    line-height: 1.8;
+}
+
+.intro {
+    max-width: 570px;
+    margin-bottom: 38px;
+}
+
+.panel {
+    background: #141b2e;
+    border: 1px solid #303951;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 24px 0 10px;
+    font-weight: 600;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 14px;
+    background: #0b1020;
+    border: 1px dashed #566585;
+    border-radius: 10px;
+    color: #dce4ff;
+}
+
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    background: #7897ff;
+    color: #081126;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #9bb1ff;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 32px;
+    padding-top: 25px;
+    border-top: 1px solid #303951;
+}
+
+.features div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.features strong {
+    font-size: 13px;
+}
+
+.features span, .notice, footer {
+    color: #aab3ca;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.notice {
+    margin-top: 22px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #252c40;
+}
+
+@media (max-width: 600px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 22px;
+    }
+
+    main {
+        margin: 40px auto;
+    }
+}
